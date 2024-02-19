@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9;
+}
+
+/* C'est pour la barre de défilement entière */
+::-webkit-scrollbar {
+    width: 5px;
+    
+}
+
+/* C'est pour la piste (la partie qui reste quand la barre de défilement n'est pas présente) */
+::-webkit-scrollbar-track {
+    background: #ffffff4d; 
+}
+ 
+/* C'est pour la poignée (la partie que nous déplaçons) */
+::-webkit-scrollbar-thumb {
+    background: #d0ced19c;
+    border-radius: 50px; 
+}
+
+/* Au survol de la poignée */
+::-webkit-scrollbar-thumb:hover {
+    background: #0a0a8170; 
+    border-radius: 50px;
+    
+}
+
+
+
+.content {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.leftbox {
+    
+    display: flex;
+    
+    height: auto;
+    flex-direction: column;
+    
+
+    -webkit-user-select: none;  /* Chrome, Safari et Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;          /* Standard non-préfixé */
+    height: 96vh;
+      
+}
+
+.rightbox {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.chatcontent{
+    display: flex;
+    height: 96vh;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    border: 0.5px solid rgba(128, 128, 128, 0.342);
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f9fafb;
+    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.616);
+}
+
+.nav {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbtn {
+    
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: inset 0px 0px 10px rgba(81, 103, 202, 0.466) ;
+    background-color: rgba(212, 218, 221, 0.486);
+}
+
+.search {
+    padding: 10px;
+    height: 3vh;
+}
+
+.x {
+    height: 90;
+    padding: 10px;
+}
+
+.xhead {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.xlist {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 70vh;
+    margin-top: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+}
+
+.xitem {
+    margin-bottom: 10px;
+    width: 310px;
+    margin: 1.6px;
+    display: flex;
+    align-items: center;
+    
+    border-radius: 3px;
+    padding: 5px 3px;
+    cursor: pointer;
+    border: 0.5px solid rgba(151, 151, 151, 0);
+    background-color: rgba(192, 191, 207, 0);
+    
+}
+.xitem:hover{
+    
+    border: 0.5px solid rgba(151, 151, 151, 0.384);
+    background-color: rgba(192, 191, 207, 0.479);
+    transition: all 0.2s ease-in-out;
+}
+
+.xpic {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    clip-path: circle();
+}
+
+.xmess {
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+
+}
+
+.xmessinfo {
+    width: 50px;
+    height: auto;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+
+.chathead {
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.chatinfo {
+    font-size: 14px;
+    display: flex;
+}
+
+.chatbtn {
+    background-color: #ebeaff8a;
+    color: rgb(7, 6, 88);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.chatbtn:hover {
+    background-color: #ebeaff8a;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0px 0px 10px rgba(81, 103, 202, 0.466) ;
+}
+
+
+.chat {
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.mess{
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px 15px 0px 15px;
+    margin: 1rem  3rem;
+    align-self: end;
+    background-color: #ddd6fe;
+}
+
+.ans{
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px 15px 15px 0px;
+    margin: 1rem  3rem;
+    align-self: start;
+    color : #fff;
+    background-color: #031299da;
+}
+
+.chatfooter {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.chataction {
+    display: flex;
+}
+
+.chatinput {
+    flex: 1;
+    padding: 10px;
+}
